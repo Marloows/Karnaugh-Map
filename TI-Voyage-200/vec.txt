@@ -1,0 +1,21 @@
+# vectorize a number to bits
+# if x in Hex it would be very easy to read from a table
+
+vec(x, bit)
+Func
+
+Local i, vre
+
+newMat(1, bit) -> vre
+
+#	LoopVar, StartValue, EndValue, Loop-Increment/Decrement
+For i,bit,1,-1
+
+	mod(x, 2)	-> v[1, i]
+	shift(x, -1)	-> x
+
+EndFor
+
+return vre
+
+Endfunc

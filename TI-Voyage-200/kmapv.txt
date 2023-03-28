@@ -1,0 +1,22 @@
+# return vector v to build the kmap
+
+kmapv(n)
+
+Func
+
+If n < 1 then
+	Return [0]
+EndIf
+
+Local v, v0
+
+kmap(n-1) -> v0
+
+If mod(n, 2) == 1
+
+	
+
+EndIf
+
+
+EndFunc

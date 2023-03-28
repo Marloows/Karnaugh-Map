@@ -1,0 +1,29 @@
+#	Generate a logical Vector
+
+lvec(bit, column)
+
+Func
+
+2^column -> column
+
+Local x, vre, i, j
+
+newMat(1, bit) -> vre
+
+0 -> x
+0 -> i
+
+While i < bit
+
+	For j,1,column,1
+		i+1	-> i
+		x	-> vre[1, i]
+	EndFor
+
+	x*-1 +1 -> x		# FLips between 1 to 0 
+
+EndWhile
+
+return vre
+
+EndFunc
