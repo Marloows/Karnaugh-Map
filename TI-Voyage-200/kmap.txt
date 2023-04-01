@@ -1,0 +1,31 @@
+kmapm(v, m)
+Func
+
+Local i, j, km
+
+rowDim(m) -> i
+colDim(m) -> j
+
+newMat(i, j) -> km
+
+While i > 0
+
+	colDim(m) -> j
+
+	While j > 0
+
+	v[m[i, j]+1] -> km[i, j]	# index starts at 1
+
+	j-1 -> j
+
+	EndWhile
+
+
+	i-1 -> i
+
+EndWhile
+
+Return km
+
+EndFunc
+

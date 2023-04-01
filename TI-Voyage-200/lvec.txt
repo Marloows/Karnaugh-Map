@@ -1,29 +1,39 @@
-#	Generate a logical Vector
+# Generate a logical Vector
 
-lvec(bit, column)
+# column = 0 gives back x_0
+# column = 1 gives bach x_1
+
+lvec(bits, column)
 
 Func
 
 2^column -> column
 
-Local x, vre, i, j
+2^bits -> bits
 
-newMat(1, bit) -> vre
+# reusing the variables
+
+Local x, v, i, j
+
+{} -> v
 
 0 -> x
 0 -> i
 
-While i < bit
+While i < bits
+
+#	LoopVar, StartValue, EndValue, Loop-Increment/Decrement
 
 	For j,1,column,1
 		i+1	-> i
-		x	-> vre[1, i]
+		x	-> v[i]
 	EndFor
 
-	x*-1 +1 -> x		# FLips between 1 to 0 
+	x*-1 +1 -> x		# keeps flipping between 1 to 0
 
 EndWhile
 
-return vre
+return v
 
 EndFunc
+

@@ -1,21 +1,28 @@
 # vectorize a number to bits
 # if x in Hex it would be very easy to read from a table
 
-vec(x, bit)
+vec(x, bits)
 Func
 
-Local i, vre
+Local i, v
 
-newMat(1, bit) -> vre
+newMat(1, bits) -> v
+
+#	LoopVar, StartValue, EndValue, Loop-Increment/Decrement
+# - is different simple on the calculator. There are two of them
+# -> is the sto button!
 
 #	LoopVar, StartValue, EndValue, Loop-Increment/Decrement
 For i,bit,1,-1
 
-	mod(x, 2)	-> v[1, i]
-	shift(x, -1)	-> x
+	Mod(x, 2)	-> v[1, i]		# needs to be a matrix # pre-allocated-space
+	Shift(x, -1)	-> x
 
 EndFor
 
-return vre
+mat>list(v) -> v		# better to be a list
+
+Return v
 
 Endfunc
+

@@ -1,0 +1,38 @@
+kmapm(n)
+Func
+
+If n < 2 Then
+
+	Return [0, 1]
+
+EndIf
+
+
+Local v0, v, i, j, m
+
+kmapv(n) -> v
+kmapv(n-1) -> v0
+
+dim(v0)->i
+dim(v)->j
+
+newMat(i, j)->map
+
+While i>0:
+
+	dim(v) -> j		#reset j
+
+	While j > 0:
+
+		v[j]+v0[i] -> m[i, j]
+
+	EndWhile
+
+	i-1 -> i
+
+EndWhile
+
+Return m
+
+EndFunc
+
