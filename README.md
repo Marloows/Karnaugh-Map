@@ -22,7 +22,7 @@ In boolean algebra any [function](https://en.wikipedia.org/wiki/Boolean_function
 
 For Example when $N = 3$
 
-$ f(A, B, C) = A B C + A B \overline C + A \overline B C + A \overline B \overline C + \overline A B C + \overline A B \overline C + \overline A \overline B C + \overline A \overline B \overline C $
+$f(A, B, C) = A B C + A B \overline C + A \overline B C + A \overline B \overline C + \overline A B C + \overline A B \overline C + \overline A \overline B C + \overline A \overline B \overline C$
 
 #### Neighboring-Nodes
 
